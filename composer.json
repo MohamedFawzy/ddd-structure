@@ -1,5 +1,5 @@
 {
-    "name": "ddd/structure",
+    "name": "ddd-dir/structure",
     "description": "Domain driven design directory structure and abstract layer",
     "type": "library",
     "require": {
@@ -18,7 +18,7 @@
     },
     "autoload": {
         "psr-4": {
-            "src\\": "src/"
+            "Domain\\Driven\\Design\\": "src/"
 
         }
     },
