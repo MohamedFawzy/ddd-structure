@@ -27,7 +27,7 @@
             "tests/"
         ]
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev-master",
     "prefer-stable": true,
     "optimize-autoloader": true
 }
