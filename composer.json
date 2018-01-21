@@ -1,0 +1,33 @@
+{
+    "name": "ddd/structure",
+    "description": "Domain driven design directory structure and abstract layer",
+    "type": "library",
+    "require": {
+        "php": ">=5.6.4"
+    },
+    "authors": [
+        {
+            "name": "Mohamed Fawzy",
+            "email": "mfawzy22@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "fzaninotto/faker": "~1.4",
+        "phpunit/phpunit": "~6.0",
+        "mockery/mockery": "~0.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "src\\": "src/"
+
+        }
+    },
+    "autoload-dev": {
+        "classmap": [
+            "tests/"
+        ]
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "optimize-autoloader": true
+}
