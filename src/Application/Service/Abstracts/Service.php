@@ -1,8 +1,7 @@
 <?php
 
 namespace Domain\Driven\Design\Application\Service\Abstracts;
-use Domain\Driven\Design\Domain\Repository\IRepository;
-
+use Domain\Driven\Design\Domain\Repository\Interfaces\IRepository;
 /**
  * Class Service
  * @package Domain\Driven\Design\Application\Service\Abstracts

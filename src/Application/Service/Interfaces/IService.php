@@ -1,5 +1,11 @@
 <?php
+namespace  Domain\Driven\Design\Application\Service\Interfaces;
 use Domain\Driven\Design\Domain\Entity\Entity;
+
+/**
+ * Interface IService
+ * @package Domain\Driven\Design\Application\Service\Interfaces
+ */
 interface IService
 {
 
