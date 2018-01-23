@@ -2,6 +2,6 @@
 Domain driven design directory structure and abstract layer
 
 
-# instllation
+# Installation
 
-`composer require `
+`composer require ddd-dir/structure`

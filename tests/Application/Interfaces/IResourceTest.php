@@ -1,6 +1,6 @@
 <?php
 
-use Domain\Driven\Design\Application\IResource;
+use Domain\Driven\Design\Application\Interfaces\IResource;
 
 class IResourceTest extends \PHPUnit\Framework\TestCase
 {
