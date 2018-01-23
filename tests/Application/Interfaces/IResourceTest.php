@@ -1,6 +1,6 @@
 <?php
 
-use Domain\Driven\Design\Application\Interfaces\IResource;
+use Domain\Driven\Design\Application\Http\Interfaces\IResource;
 
 
 Class ExampleResource implements IResource
@@ -10,7 +10,7 @@ Class ExampleResource implements IResource
         // TODO: Implement find() method.
     }
 
-    public function findAll($start, $end, $filter): \Domain\Driven\Design\Domain\Entity\Entity
+    public function findAll(int $start, int $end, $filter): \Domain\Driven\Design\Domain\Entity\Entity
     {
         // TODO: Implement findAll() method.
     }
@@ -40,9 +40,5 @@ class IResourceTest extends \PHPUnit\Framework\TestCase
     }
 
 
-    public function testHasFunctions()
-    {
-        $ExampleResource = new ExampleResource();
-    }
 
 }

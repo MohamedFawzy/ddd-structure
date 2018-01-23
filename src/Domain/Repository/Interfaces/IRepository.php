@@ -1,14 +1,13 @@
 <?php
 
-namespace Domain\Driven\Design\Application\Interfaces;
+namespace Domain\Driven\Design\Domain\Repository\Interfaces;
 use Domain\Driven\Design\Domain\Entity\Entity;
 
 /**
- * Interface for manage resources used in HTTP app layer
- * Interface IResource
- * @package Domain\Driven\Design\Application\Interfaces
+ * Interface IRepository
+ * @package Domain\Driven\Design\Domain\Repository\Interfaces
  */
-interface IResource
+interface IRepository
 {
 
 

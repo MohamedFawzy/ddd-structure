@@ -1,6 +1,6 @@
 <?php
 
-namespace Domain\Driven\Design\Application\Interfaces;
+namespace Domain\Driven\Design\Application\Http\Interfaces;
 /**
  * Class IResponse
  * needed method to be implemented in every resource
