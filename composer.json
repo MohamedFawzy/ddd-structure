@@ -19,7 +19,9 @@
     },
     "autoload": {
         "psr-4": {
-            "Domain\\Driven\\Design\\": "src/"
+            "Domain\\Driven\\Design\\": "src/",
+            "Domain\\Driven\\Design\\tests\\": "tests/"
+
 
         }
     },
