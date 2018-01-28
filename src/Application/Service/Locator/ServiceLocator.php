@@ -1,0 +1,47 @@
+<?php
+
+namespace Domain\Driven\Design\tests\Application\Service;
+
+/**
+ * Class ServiceLocator
+ * @package Domain\Driven\Design\tests\Application\Service
+ */
+class ServiceLocator
+{
+    private static $config=null;
+
+    private static function getConfig()
+    {
+        $modules = [];
+
+        $config = array();
+
+        foreach ($modules as $module){
+            $config = array_merge($config, self::loadModuleConfig($module));
+        }
+
+        self::$config = $config;
+    }
+
+    /**
+     * @param $path
+     * @return mixed
+     */
+    private static function loadModuleConfig($path)
+    {
+        return include $path;
+    }
+
+    /**
+     * @param $serviceName
+     * @return mixed
+     */
+    public static function getService($serviceName)
+    {
+        if(self::$config==null){
+            self::getConfig();
+        }
+        return call_user_func(self::$config[$serviceName]);
+    }
+
+}
