@@ -20,6 +20,8 @@ abstract class Transform
         if(!is_object($object)){
             throw new InvalidArgumentException("transformer parameter must be an object");
         }
+
+        $this->object = $object;
     }
 
     abstract public function transform(): Entity;
