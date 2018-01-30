@@ -7,7 +7,7 @@ use Domain\Driven\Design\Infrastructure\Interfaces\IModel;
 class Repository
 {
 
-    private $model;
+    protected $model;
 
     /**
      * Repository constructor.
