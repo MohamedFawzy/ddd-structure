@@ -1,6 +1,7 @@
 <?php
 
 namespace Domain\Driven\Design\Domain\Hydrate;
+use Domain\Driven\Design\Application\Exception\InvalidArgumentException;
 use Domain\Driven\Design\Domain\Entity\Entity;
 
 /**
@@ -12,9 +13,27 @@ abstract class Hydrator
 {
 
     /**
-     * @param \StdClass $class
+     * @var object
+     */
+    protected $object;
+
+    /**
+     * Hydrator constructor.
+     * @param $object
+     */
+    public function __construct($object)
+    {
+        if(!is_object($object)){
+            throw new InvalidArgumentException("Hydrator must be an object");
+        }
+
+        $this->object = $object;
+    }
+
+    /**
+     * Hydrate object
      * @return Entity
      */
-    abstract function hydrate(\StdClass $class): Entity;
+    abstract function hydrate(): Entity;
 
 }
