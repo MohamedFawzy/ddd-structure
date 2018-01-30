@@ -36,4 +36,12 @@ abstract class Hydrator
      */
     abstract function hydrate(): Entity;
 
+    /**
+     * get class name
+     * @return string
+     */
+    public static function getClassName() {
+        return get_called_class();
+    }
+
 }
