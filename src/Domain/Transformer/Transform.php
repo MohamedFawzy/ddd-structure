@@ -2,6 +2,7 @@
 
 namespace Domain\Driven\Design\Domain\Transformer;
 
+use Domain\Driven\Design\Application\Exception\InvalidArgumentException;
 use Domain\Driven\Design\Domain\Entity\Entity;
 
 /**
@@ -12,6 +13,15 @@ use Domain\Driven\Design\Domain\Entity\Entity;
 abstract class Transform
 {
 
-    abstract public function transform(\StdClass $class): Entity;
+    protected $object;
+
+    public function __construct($object)
+    {
+        if(!is_object($object)){
+            throw new InvalidArgumentException("transformer parameter must be an object");
+        }
+    }
+
+    abstract public function transform(): Entity;
 
 }
