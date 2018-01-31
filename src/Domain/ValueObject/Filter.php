@@ -25,7 +25,7 @@ class Filter extends ValueObject
      * @param string $field_name
      * @param string $order
      */
-    public function __construct(string $field_name ,string $order)
+    public function __construct(?string $field_name=null ,string $order=null)
     {
         $this->field_name = $field_name;
         $this->order      = $order;

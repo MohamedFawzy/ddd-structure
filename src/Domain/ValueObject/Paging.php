@@ -24,7 +24,7 @@ class Paging extends ValueObject
      * @param int $start
      * @param int $end
      */
-    public function __construct(int $start, int $end)
+    public function __construct(?int $start=null, ?int $end=null)
     {
         $this->start = $start;
         $this->end   = $end;
