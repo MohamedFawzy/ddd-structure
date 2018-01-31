@@ -17,7 +17,7 @@ interface IModel
      * @param int $id
      * @return Entity
      */
-    public function find(int $id): Entity;
+    public function find(int $id);
 
     /**
      * find all objects using pagination
@@ -26,7 +26,7 @@ interface IModel
      * @param $filter
      * @return Entity
      */
-    public function findAll(int $start, int $end, $filter): Entity;
+    public function findAll(int $start, int $end, $filter);
 
 
     /**
@@ -34,7 +34,7 @@ interface IModel
      * @param $object
      * @return Entity
      */
-    public function create($object): Entity;
+    public function create($object);
 
 
     /**
@@ -42,7 +42,7 @@ interface IModel
      * @param int $id
      * @return Entity
      */
-    public function update(int $id): Entity;
+    public function update(int $id);
 
 
     /**
@@ -50,6 +50,6 @@ interface IModel
      * @param int $id
      * @return boolean
      */
-    public function delete(int $id): bool;
+    public function delete(int $id);
 
 }
