@@ -10,13 +10,14 @@ class ServiceLocator
 {
     private static $config=null;
 
+    public static $modules=[];
+
     private static function getConfig()
     {
-        $modules = [];
 
         $config = array();
 
-        foreach ($modules as $module){
+        foreach (self::$modules as $module){
             $config = array_merge($config, self::loadModuleConfig($module));
         }
 
