@@ -50,6 +50,6 @@ interface IModel
      * @param int $id
      * @return boolean
      */
-    public function delete(int $id);
+    public function remove(int $id);
 
 }
