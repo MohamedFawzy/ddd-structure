@@ -1,6 +1,6 @@
 <?php
 
-namespace Domain\Driven\Design\tests\Application\Service;
+namespace Domain\Driven\Design\Application\Service\Locator;
 
 /**
  * Class ServiceLocator
