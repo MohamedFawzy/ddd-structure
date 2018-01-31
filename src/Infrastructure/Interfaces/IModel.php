@@ -42,7 +42,7 @@ interface IModel
      * @param int $id
      * @return Entity
      */
-    public function update(int $id);
+    public function change(int $id);
 
 
     /**
