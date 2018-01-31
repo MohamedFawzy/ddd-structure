@@ -8,16 +8,16 @@ namespace Domain\Driven\Design\Application\Service\Locator;
  */
 class ServiceLocator
 {
-    private static $config=null;
+    protected static $config=null;
 
-    public static $modules=[];
+    protected static $modules=[];
 
     private static function getConfig()
     {
 
         $config = array();
 
-        foreach (self::$modules as $module){
+        foreach (static::$modules as $module){
             $config = array_merge($config, self::loadModuleConfig($module));
         }
 
@@ -28,9 +28,9 @@ class ServiceLocator
      * @param $path
      * @return mixed
      */
-    private static function loadModuleConfig($path)
+    protected static function loadModuleConfig($path)
     {
-        return include $path;
+        return include "/var/www/html/".$path;
     }
 
     /**
@@ -39,7 +39,7 @@ class ServiceLocator
      */
     public static function getService($serviceName)
     {
-        if(self::$config==null){
+        if(static::$config==null){
             self::getConfig();
         }
         return call_user_func(self::$config[$serviceName]);
