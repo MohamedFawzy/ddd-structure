@@ -5,29 +5,29 @@ use Domain\Driven\Design\Domain\Entity\Entity;
 
 class ExampleModel extends AbstractModel implements IModel
 {
-    public function find(int $id): Entity
+    public function find(int $id)
     {
-        dd($id);
+        // TODO: Implement find() method.
     }
 
-    public function findAll(int $start, int $end, $filter): Entity
+    public function findAll(int $start, int $end, $filter)
     {
         // TODO: Implement findAll() method.
     }
 
-    public function create($object): Entity
+    public function create($object)
     {
         // TODO: Implement create() method.
     }
 
-    public function update(int $id): Entity
+    public function change(int $id)
     {
-        // TODO: Implement update() method.
+        // TODO: Implement change() method.
     }
 
-    public function delete(int $id): bool
+    public function remove(int $id)
     {
-        // TODO: Implement delete() method.
+        // TODO: Implement remove() method.
     }
 
 

@@ -18,7 +18,6 @@ class ExampleServiceTest extends TestCase
         $paging = new \Domain\Driven\Design\Domain\ValueObject\Paging(10,20);
         $filters = new \Domain\Driven\Design\Domain\ValueObject\Filter('name', 'desc');
         $exampleService = new ExampleService(new ExampleRepository(new ExampleModel($paging, $filters)));
-        var_dump($exampleService);
     }
 
 }
