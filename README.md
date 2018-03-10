@@ -12,6 +12,6 @@ Domain driven design directory structure and abstract layer
 `./vendor/bin/phpunit tests/`
 
 
-# Build 
+# Travis Badge 
 
 [![Build Status](https://travis-ci.org/MohamedFawzy/ddd-structure.svg?branch=master)](https://travis-ci.org/MohamedFawzy/ddd-structure)
