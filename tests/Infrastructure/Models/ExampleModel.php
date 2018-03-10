@@ -31,5 +31,4 @@ class ExampleModel extends AbstractModel implements IModel
     }
     
 
-
 }
