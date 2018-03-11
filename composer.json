@@ -15,7 +15,8 @@
     "require-dev": {
         "fzaninotto/faker": "~1.4",
         "phpunit/phpunit": "~6.0",
-        "mockery/mockery": "~0.9"
+        "mockery/mockery": "~0.9",
+        "codeclimate/php-test-reporter": "^0.3.0@dev"
     },
     "autoload": {
         "psr-4": {

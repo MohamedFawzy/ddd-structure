@@ -10,6 +10,10 @@ before_script:
   - composer self-update
   - composer install
 
+# commands to be run after enviroment runs
+after_script:
+  - vendor/bin/test-reporter
+
 
 # Commands you want to run that will verify your build.
 script: ./vendor/bin/phpunit  tests/
@@ -26,3 +30,8 @@ matrix:
 notifications:
     on_success: never
     on_failure: always
+# code climate
+addons:
+  code_climate:
+    repo_token:
+      secure: "Nc3MuWWUOi/b/1QYY9sppdTRnOvXtL7dOVRD8R/Eu630YhpX7YLIYKeHs0c1x4mk7c5n7p7IekVadPu1Ma/3ZTaOaxMUP2Xj+G083zyHLz97eewaR9fuwXyRvQPe3+k5ZesjI8NWVK0bHZW5c5V24FIA3egTo8YjGG6RQ2Kw5v9sdqCJBsPOL3wmLOnfaveImuxFlRr4++xg81Ah7jFFH7mQ0RKEOFh9nswsBzMogmUZ3NGxpq5N/tabkmyewnv3n0aPrr2e3FHic+TCuksgkeO0q9T+LkkauPTzXQsqACKgi4b1HaT/KBcBc1Ur0l1V9sfi5S6KObOSfWiMz8tG8odgyW1vQByR8wUo6ouSeBi73lKyQE01/DWYeyMO5OaSnqQJRJKdxr8DovE9OGn34nTW6XtUraxXIIb1aKBhyW+AV3YsDL7b8v9TtkJybzqqt6kaRve6bo1ahDnaZ3JNBxR/EgMtj5PTCUfJLXeqOuIQuVr5hTh0UcR1iGY1sFGoJ+Px9JJk+EIxLgbQJG9YLlFzvHfqxxfNoP4ZuPti0IPY+rwNQaT+tKSl61RR3+E0yRG5gSYiXW+OriqlL0w/J9khxq2K9QIbHN8YvdsiG8VE7Qnkblw5d0MKUcw88CvRgWaGHHuwWUNHs0uBKbIqsTUaWKtsCQkWP4KQLeCDFm0="
